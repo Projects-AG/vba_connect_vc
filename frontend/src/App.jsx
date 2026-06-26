@@ -133,7 +133,7 @@
 // export default App;
 
 import NotificationDemo
-  from "./notification/NotificationDemo";
+  from "./notification/pages/NotificationDemo";
 
 export default function App() {
 

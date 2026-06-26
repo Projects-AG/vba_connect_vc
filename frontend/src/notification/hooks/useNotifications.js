@@ -27,7 +27,18 @@ export function useNotifications() {
 
     useEffect(() => {
 
+        // Load notifications immediately
         loadNotifications();
+
+        // Auto refresh every 10 seconds
+        const interval = setInterval(() => {
+
+            loadNotifications();
+
+        }, 10000);
+
+        // Cleanup on unmount
+        return () => clearInterval(interval);
 
     }, []);
 

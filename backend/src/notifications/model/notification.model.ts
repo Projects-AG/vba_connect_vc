@@ -7,9 +7,14 @@ export class NotificationModel {
 
   create(notification: any) {
 
-    this.notifications.unshift(notification);
+    const newNotification = {
+      ...notification,
+      timestamp: new Date().toISOString(),
+    };
 
-    return notification;
+    this.notifications.unshift(newNotification);
+
+    return newNotification;
 
   }
 

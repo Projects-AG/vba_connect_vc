@@ -1,4 +1,4 @@
-import NotificationCenter from "./components/NotificationCenter";
+import NotificationCenter from "../components/NotificationCenter";
 
 export default function NotificationDemo() {
 
